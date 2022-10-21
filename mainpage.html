@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/mainpage.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/mainpage.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/mainpage.js"></script>
     <title>Animflix-Home</title>
 </head>
-<body>
+<body class = light-mode>
+<header>
     <div class="wrapper">
         <nav class="navbar">
           <div id="menuToggle">
@@ -26,10 +28,10 @@
             </ul>
             </div>
             <div class ="navbar-logo">
-                <img src="/img/Animflix-Logo.png" alt="">
+                <img src="./img/Animflix-Logo.png" alt="">
             </div>
             <div class="search-2">
-              <img src="/img/baseline_search_white_24dp.png" >
+              <img src="./img/baseline_search_white_24dp.png" >
             </div>
                 <ul class="list-bar">
                     <li><a href="">Home</a></li>
@@ -37,122 +39,86 @@
                     <li><a href="">Film</a></li>
                     <li><a href="">New From ANIMFLIX </a></li>
                     <li><a href="">About</a></li>
-                    
-                        <li>
-                            <a class="search">
-                                <span class="material-icons">
-                                    search
-                                </span>
-                            </a> 
-                        </li>
-                        <li>
-                        <a href="">AniKids</a>
-                        </li>
-                        <li>
-                            <a class="gift">
-                            <img src="/img/gift-512.png" alt="">
+                <ul>
+                    <div class="right-menu">
+                        <ul>
+                            <li>
+                                <a class="search">
+                                    <span class="material-icons">
+                                        search
+                                    </span>
+                                </a> 
+
+                            </li>
+                            <li>
+                            <a class="darkmode-toggle">
+                                <input type="checkbox" class="toggle-button">
                             </a>
-                        </li>
-                        <li>
-                            <a class="notif">
-                            <img src="/img/baseline_notifications_white_24dp.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a class="user-profile">
-                            <img src="/img/User-Profile-PNG.png" alt="">
-                            </a>
-                        </li>
+                            </li>
+                            <li>
+                            <a href="">AniKids</a>
+                            </li>
+                            <li>
+                                <a class="gift">
+                                <img src="./img/gift-512.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="notif">
+                                <img src="./img/baseline_notifications_white_24dp.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="user-profile">
+                                <img src="./img/User-Profile-PNG.png" alt="">
+                                </a>
+                            </li>
+                        <ul>
                     </div>
-                </ul>
             </div>
         </nav>
     </div>
-    <div class="first-section">
-        <div class="section-content">
-          <h3><center>Fall Anime season</center></h3>
-      </div>
-      <div class="media-container">
-          
-          <div class="media-group" id="group-1">
-            <div class="media-element">
-              <img src="/img/one piece.webp" alt="" />
-            </div>
-            <div class="media-element">
-              <img src="/img/spy-x-family.webp" alt="" />
-            </div>
-            <div class="media-element">
-              <img src="/img/Chainsaw-Man-Anime.webp" alt=""/>
-            </div>
-            <div class="media-element">
-              <img src="/img/bleachthousandyearbloodwararc_keyvisual2-1-e1659800164822.webp" alt=""/>
-            </div>
-            <div class="media-element">
-              <img src="/img/anime-my-hero-academia-season-6-sub-indo-viu.jpg" alt=""/>
-            </div>
-            <div class="media-element">
-              <img src="/img/anime-mob-psycho-100-season-3.jpg" alt=""/>
-            </div>
-  
-      </div>
-    <div class="second-section">
-      <div class="section-content">
-        <h3><center>Nolstalgic Anime</center></h3>
-      </div>
-      <div class="media-container ">
-          <div class="media-group second">
-            <div class="media-element second">
-              <img src="/img/one piece.webp" alt="" />
-            </div>
-            <div class="media-element second ">
-              <img src="/img/spy-x-family.webp" alt="" />
-            </div>
-            <div class="media-element second">
-              <img src="/img/Chainsaw-Man-Anime.webp" alt=""/>
-            </div>
-            <div class="media-element">
-              <img src="/img/bleachthousandyearbloodwararc_keyvisual2-1-e1659800164822.webp" alt=""/>
-            </div>
-            <div class="media-element">
-              <img src="/img/anime-my-hero-academia-season-6-sub-indo-viu.jpg" alt=""/>
-            </div>
-            <div class="media-element">
-              <img src="/img/anime-mob-psycho-100-season-3.jpg" alt=""/>
-            </div>
-          </div>
+</header>
+<main>
+    <div class="row">
+        <div class="header">
+            <h3 class="title">Fall Season</h3>
+            <div class="progress-bar"></div>
         </div>
-        <section>Footer Example 3</section>
+        <div class =container>
+            <button class="handle left-handle">
+                <div class="text">&#8249;</div>
+            </button>
+            <div class="slider">
+                <img src="./img/anime-mob-psycho-100-season-3.jpg">
+                <img src="./img/anime-my-hero-academia-season-6-sub-indo-viu.jpg">
+                <img src="./img/bleachthousandyearbloodwararc_keyvisual2-1-e1659800164822.webp">
+                <img src="./img/JUJITSU.jpg">
+                <img src="./img/one piece.webp">
+                <img src="./img/Chainsaw-Man-Anime.webp">
+                <img src="./img/shinobi no ittoki.jpg">
+                <img src="./img/spy-x-family.webp">
+            </div>
+            <button class ="handle right-handle">
+                <div class="text">&#8250;</div>
+            </button>
+        </div>
+    </div>
+</main>
+        <section class="footer">Footer</section>
 
         <footer class="footer-distributed">
     
           <div class="footer-right">
-    
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
+
+
     
           </div>
     
           <div class="footer-left">
-    
-            <p class="footer-links">
-              <a class="link-1" href="#">Home</a>
-    
-              <a href="#">Blog</a>
-    
-              <a href="#">Pricing</a>
-    
-              <a href="#">About</a>
-    
-              <a href="#">Faq</a>
-    
-              <a href="#">Contact</a>
-            </p>
-    
-            <p>Company Name &copy; 2015</p>
           </div>
-    
+
         </footer>
+    <script src="./js/jquery.js"></script>
 </body>
 </html>

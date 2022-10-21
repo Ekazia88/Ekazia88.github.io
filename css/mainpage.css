@@ -1,11 +1,10 @@
-*{
+*, *::after, *::before{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 body{
     font-family: 'Arial', sans-serif;
-    background: #141414;
 }
 ul{
     list-style: none;
@@ -22,6 +21,7 @@ a {
 	text-decoration: none;
 }
 .wrapper{
+    margin:0 auto ;
     display:flex;
     width:100%;
 }
@@ -150,9 +150,6 @@ a {
   font-size: 22px;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   transform: none;
@@ -172,46 +169,59 @@ a {
     padding: 30px 10px;
     font-size: 12px;
 }
+.right-menu{
+  float: right;
+  padding: 0px 8px;
+}
+.navbar, .right-menu ul, .right-menu li{
+  display: inline-block;
+}
 .search {
     margin-top: -5px ;
-    margin-left: 1200px;
     position: block;
 }
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+}
 
+[data-theme="light"]{
+  --bg-color:blueviolet;
+  --text-color:white;
+}
+.dark-mode {
+  background-color:#121212;
+  color:white;
+}
+.light-mode{
+  background-color:blueviolet;
+  color:white;
+}
+.toggle-button {
+  -webkit-appearance: none;
+  outline: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  position: relative;
+  transition: 0.4s;
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/moon.png")
+  no-repeat center #212121;
+  background-size: 60px;
+  cursor: pointer;
+}
+.toggle-button:checked {
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/sun.png")
+  no-repeat center #ffffff;
+  background-size: 40px;
+}
 .list-bar img{
     margin-top: -5px;
     height: 20px;
     width: 20px;
 }
-.media-container{
-    position: relative;
-  }
-  .media-scroller,
-  .media-group {
-    display: grid;
-    gap: 0.25rem;
-    grid-auto-flow: column;
-  }
-  .media-scroller {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    grid-auto-columns: 100%;
-    padding: 0 3rem;
-    scroll-padding-inline: 3rem;
-  }
-  .media-group {
-    grid-auto-columns: 1fr;
-  }
-  .media-element {
-    border-radius: 0.25rem;
-    overflow: hidden;
-  }
-  .media-element > img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-  }
-  section {
+
+  .footer {
     width: 100%;
     margin-top:100%;
     display: inline-block;
@@ -306,6 +316,7 @@ a {
       line-height: 1.8;
     }
   }
+
  @media (max-width:780px) {
     .navbar{
         position:absolute;
@@ -321,13 +332,16 @@ a {
         display: block;
     }
     .navbar-logo img{
-
-        margin-left: 150px;
+      position: absolute;
+      left: 50%;
     }
     .search-2 {
         display: block;
-        height: 50px;
-        margin: 20px 50px;
+        position: absolute;
+
+        top: 50%;
+        left: 80%;
+        margin-top: 25px;
     }    
  }
  
